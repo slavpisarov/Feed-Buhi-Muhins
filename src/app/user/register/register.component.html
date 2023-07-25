@@ -1,1 +1,48 @@
-<h1>register works!</h1>
+<div class="container">
+    <form class="register">
+
+        <fieldset>
+            <h2>Registration Form</h2>
+
+            <!-- email -->
+            <p class="field field-icon">
+                <label for="email"><span><i class="fas fa-envelope"></i></span></label>
+                <input type="email" name="email" id="email" placeholder="slav.pisarov@gmail.com">
+            </p>
+            <ng-container *ngIf="false">
+                <p class="error">Email is required!</p>
+                <p class="error">Email is not valid!</p>
+            </ng-container>
+
+            <!-- password -->
+            <p class="field field-icon">
+                <label for="password"><span><i class="fas fa-lock"></i></span></label>
+                <input type="password" name="password" id="password" placeholder="******" formControlName="password">
+            </p>
+            <ng-container *ngIf="false">
+                <p class="error">Password is required!</p>
+                <p class="error">Password must be at least 5 characters!</p>
+            </ng-container>
+
+            <!-- rePassword -->
+            <p class="field field-icon">
+                <label for="rePassword"><span><i class="fas fa-lock"></i></span></label>
+                <input type="password" name="rePassword" id="rePassword" placeholder="******"
+                    formControlName="rePassword">
+            </p>
+            <ng-container *ngIf="false">
+
+                <p class="error">Repeat Password does not match password!</p>
+
+            </ng-container>
+
+            <button>Create Account</button>
+
+            <p class="text-center">
+                <a id="account">Have an account?</a>
+                <a routerLink="/user/login">Log In</a>
+            </p>
+
+        </fieldset>
+    </form>
+</div>

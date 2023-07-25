@@ -9,7 +9,7 @@ form.login, form.register {
 .login fieldset, .register fieldset {
     border-radius: 0.3em;
     padding: 0.8em;
-    background-color: #ffffff;
+    background-color:rgba(7, 43, 73, 0.998);
 }
 
 .login h2, .register h2 {
@@ -29,20 +29,23 @@ form.login, form.register {
     border-left: 0.3em solid green;
     border-top-right-radius: 0.3em;
     border-bottom-right-radius: 0.3em;
+    font-size: large;
 }
 
 .login select, .register select {
-    border-color: black;
+    border-color: #00acf4;
 }
 
 .login button, .register button {
-    color: white;
+    background-color: #00acf4;
     border: none;
     border-radius: 0.3em;
     padding: 0.6em 1.2em;
     margin-top: 1.5rem;
     width: 60%;
     outline: none;
+    cursor: pointer;
+    font-size: large;
 }
 
 .login i, .register i {
@@ -55,7 +58,7 @@ form.login, form.register {
 }
 
 .login a, .register a {
-    color: #007bff;
+    color: #fdfdfd;
 }
 
 .login a:hover, .register a:hover {
@@ -69,6 +72,8 @@ form.login, form.register {
 .login .field, .register .field {
     display: flex;
     padding-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* errors  */
@@ -76,10 +81,24 @@ form.login, form.register {
 p.error {
     text-align: left;
     border-radius: 0.3em;
-    color: red;
+    color: rgb(231, 68, 68);
     padding-top: 0;
+    padding-left: 30px;
+
 }
 
 .input-error {
     border-left-color: red;
 }
+
+h2 {
+    color: #00acf4;
+    font-size: 30px;
+}
+
+#account{
+    color: #00acf4;
+    padding-right: 8px;
+    font-size: large;
+}
+
