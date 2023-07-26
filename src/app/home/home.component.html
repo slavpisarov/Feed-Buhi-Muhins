@@ -6,12 +6,18 @@
     <!-- <span class="span-wrapper">Buhi Muhins is hungry again and must be fed immediately!</span> -->
     <span class="span-wrapper">Buhi Muhins is hungry again </span>
     <span class="span-wrapper">and must be fed immediately!</span>
-    <p id="food"></p>
-    <button id="btn">And his next meal is...</button>
+    <p id="food" *ngIf="currentFood.length !==0 "> {{ currentFood }}</p>
+    <button id="btn" [disabled]="isTheSame" (click)="generateFood()">And his next meal is...</button>
 </div>
 
-<div class="alert">
+<div class="alert" *ngIf="isTheSame && sameFoodCounter < 2">
     <span class="alert-wrapper">I had that last time,</span>
     <span class="alert-wrapper">choose another!</span>
-    <button id="alert-btn">Sure thing!</button>
+    <button id="alert-btn" (click)="regenerateFood()">Sure thing!</button>
+</div>
+
+<div class="alert" *ngIf="sameFoodCounter >= 2 && isTheSame">
+    <span class="alert-wrapper">Ahh, not again,</span>
+    <span class="alert-wrapper">pleace try one more time!</span>
+    <button id="alert-btn" (click)="regenerateFood()">No worries!</button>
 </div>

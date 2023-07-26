@@ -38,7 +38,7 @@ p{
     word-wrap: break-word;
     line-height: 25px;
     margin: 30px 0;
-    opacity: 0;
+    // opacity: 0;
 }
 
 .fade{
@@ -63,7 +63,7 @@ button{
 .alert{
     width: 50vmin;
     padding: 70px 0px;
-    background-color:rgba(185, 185, 185, 0.812);    
+    background-color:rgba(224, 22, 22, 0.812);    
     position:fixed;
     transform: translate(-50%, -50%);
     top: 10%;
@@ -71,7 +71,7 @@ button{
     border-radius: 20px;
     margin-left: 250px;
     margin-top: 50px;
-    display: none;
+    // display: none;
 }
 
 .alert-wrapper{
