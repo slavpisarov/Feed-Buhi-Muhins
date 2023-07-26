@@ -1,18 +1,24 @@
 <div class="container">
-    <form class="login">
+    <form class="login" #form="ngForm" (submit)="addFoodSubmitHandler(form)">
 
         <fieldset>
-            <h3>Do you know any flavours he might be willing to try?</h3>
+            <h3>Do you know any flavours </h3>
+            <h3> he might be willing to try?</h3>
 
             <p class="field field-icon">
-                <input class="input-error" type="text" name="food" id="email" placeholder="Beef and Tomato">
+                <input class="input-error" type="text" name="type" id="type" placeholder="Beef and Tomato"
+                ngModel #inputFood="ngModel" required minlength="4">
             </p>
 
-            <ng-container *ngIf="false">
-                <p class="error" >Flavour already exists</p>
+            <ng-container *ngIf="inputFood.touched">
+                <p class="error" *ngIf="inputFood.touched">Flavour already exists</p>
+
+                <p class="error" *ngIf="inputFood.errors?.['minlength']">
+                    Meal must be at least 4 characters long.
+                </p>
             </ng-container>
 
-            <button>Add to Menu</button>
+            <button [disabled]="form.invalid">Add to Menu</button>
 
         </fieldset>
     </form>

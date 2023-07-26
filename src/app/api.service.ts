@@ -15,4 +15,8 @@ export class ApiService {
     return this.http.get<Food[]>(apiFoodUrl)
   }
 
+  addFood(type:string){
+    return this.http.post<Food>(apiFoodUrl, {type})
+  }
+
 }

@@ -18,9 +18,9 @@ export class HomeComponent {
   constructor(private apiService: ApiService) {}
 
   generateFood():void{
-    this.apiService.getFood().subscribe((res) => {
+    this.apiService.getFood().subscribe((foods) => {
 
-      this.foodList = Object.values(res);
+      this.foodList = Object.values(foods);
       const foodsLength = this.foodList.length;
       this.isTheSame = false;
 
