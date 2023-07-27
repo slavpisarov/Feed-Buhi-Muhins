@@ -1,5 +1,5 @@
 <div class="container">
-    <form class="register">
+    <form class="register" #form="ngForm" (ngSubmit)="register(form)">
 
         <fieldset>
             <h2>Registration Form</h2>
@@ -7,7 +7,8 @@
             <!-- email -->
             <p class="field field-icon">
                 <label for="email"><span><i class="fas fa-envelope"></i></span></label>
-                <input type="email" name="email" id="email" placeholder="slav.pisarov@gmail.com">
+                <input type="email" name="email" id="email" placeholder="slav.pisarov@gmail.com"
+                ngModel required>
             </p>
             <ng-container *ngIf="false">
                 <p class="error">Email is required!</p>
@@ -17,7 +18,8 @@
             <!-- password -->
             <p class="field field-icon">
                 <label for="password"><span><i class="fas fa-lock"></i></span></label>
-                <input type="password" name="password" id="password" placeholder="******" formControlName="password">
+                <input type="password" name="password" id="password" placeholder="******" 
+                ngModel required>
             </p>
             <ng-container *ngIf="false">
                 <p class="error">Password is required!</p>
@@ -28,7 +30,7 @@
             <p class="field field-icon">
                 <label for="rePassword"><span><i class="fas fa-lock"></i></span></label>
                 <input type="password" name="rePassword" id="rePassword" placeholder="******"
-                    formControlName="rePassword">
+                ngModel required >
             </p>
             <ng-container *ngIf="false">
 

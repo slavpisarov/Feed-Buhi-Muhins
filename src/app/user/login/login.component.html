@@ -1,12 +1,13 @@
 <div class="container">
-    <form class="login">
+    <form class="login" #form="ngForm" (ngSubmit)="login(form)">
 
         <fieldset>
             <h2>Login Form</h2>
 
             <p class="field field-icon">
                 <label for="email"><span><i class="fas fa-envelope"></i></span></label>
-                <input class="input-error" type="email" name="email" id="email" placeholder="slav.pisarov@gmail.com">
+                <input class="input-error" type="email" name="email" id="email" placeholder="slav.pisarov@gmail.com"
+                ngModel required>
 
             </p>
 
@@ -17,7 +18,8 @@
 
             <p class="field field-icon">
                 <label for="password"><span><i class="fas fa-lock"></i></span></label>
-                <input type="password" name="password" id="password" placeholder="******" >
+                <input type="password" name="password" id="password" placeholder="******" 
+                ngModel required>
             </p>
 
 

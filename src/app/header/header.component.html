@@ -4,7 +4,7 @@
             <p class="logo"><span class="logo" routerLink="/home">Feed Buhi Muhins</span></p>
         </div>
         <div  class="mini-navbar">
-            <ul>
+            <ul *ngIf="!isLoggedIn">
                 <li>
                     <a routerLink="/user/login">Login</a>
                 </li>
@@ -12,12 +12,12 @@
                     <a routerLink="/user/register">Register</a>
                 </li>
             </ul>
-<!-- 
-            <ul >
+
+            <ul *ngIf="isLoggedIn">
                 <li>
-                    <a >Logout</a>
+                    <a (click)="logout()">Logout</a>
                 </li>
-            </ul> -->
+            </ul>
         </div>
     </div>
     <nav>
@@ -28,7 +28,7 @@
             <li>
                 <a routerLink="/catalog">What's on the Menu</a>
             </li>
-            <li>
+            <li *ngIf="isLoggedIn">
                 <a routerLink="/create">Add a Meal</a>
             </li>
         </ul>
