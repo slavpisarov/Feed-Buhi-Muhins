@@ -19,7 +19,7 @@ export class CatalogComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.apiService.getFood().subscribe((foods) => {
+    this.apiService.getFoodWithLimit('6').subscribe((foods) => {
 
       for (const key of Object.entries(foods)) {
 

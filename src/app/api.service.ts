@@ -17,6 +17,10 @@ export class ApiService {
     return this.http.get<Food[]>(apiFoodUrl)
   }
 
+  getFoodWithLimit(limit:string){
+    return this.http.get<Food[]>(`https://buhi-muhins-food-generator-default-rtdb.europe-west1.firebasedatabase.app/food.json?orderBy="$key"&limitToLast=${limit}`)
+  }
+
   addFood(type:string){
     return this.http.post<Food>(apiFoodUrl, {type})
   }
