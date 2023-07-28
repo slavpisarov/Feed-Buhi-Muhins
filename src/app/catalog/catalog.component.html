@@ -1,1 +1,27 @@
-<h1>catalog works!</h1>
+<main>
+
+    <div  class="theme-title">
+
+        <h1>Menu :</h1>
+
+        <!-- theme component  -->
+            <div *ngFor="let food of foodList"class="theme-container">
+            <div class="theme-name-wrapper">
+                <div class="theme-name">
+                    <a class="normal">
+                        <h2>{{food.type}}</h2>
+                    </a>
+                    <div class="columns">
+                        <div class="subscribers">
+                            <button [routerLink]="" class="editBtn">Edit</button>
+                        </div>
+                        <div class="subscribers">
+                            <button class="deleteBtn" (click)="delete(food.id)">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>

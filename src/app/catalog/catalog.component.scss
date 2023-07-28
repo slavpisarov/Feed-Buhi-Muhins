@@ -1,0 +1,90 @@
+
+
+/* theme list item */
+
+main{
+    text-align: center;
+}
+
+// .theme-container a {
+//     text-decoration: none;
+//     color: inherit;
+// }
+
+.theme-container {
+text-align: center;
+}
+
+.theme-title{
+text-align: center;
+}
+h1{
+    text-align: center;
+    color: white;
+    background-color: rgba(7, 43, 73, 0.998);
+    font-size: xx-large;
+    margin-left: 40%;
+    margin-right: 40%;
+    border: 1px solid #00acf4;
+
+}
+
+.theme-container h2, p {
+    padding: 0.3em 0 0.2em;
+    margin: 0;
+}
+
+.theme-name-wrapper {
+    background-color:rgba(7, 43, 73, 0.998);
+    border: 2px solid #00acf4;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3em 0.5em;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+
+
+.theme-name {
+    width: 100%;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.7rem;
+}
+
+.subscribers {
+    text-align: center;
+    flex-basis: 70%;
+}
+
+.subscribers button {
+    padding: 0.2rem 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
+    width: 40%;
+}
+
+.editBtn {
+    background-color: rgba(0, 128, 0, 0.677);
+}
+
+.deleteBtn {
+    background-color: rgba(255, 0, 0, 0.568);
+}
+
