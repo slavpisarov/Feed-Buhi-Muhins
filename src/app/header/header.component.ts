@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user/user.service';
 import { Router } from '@angular/router';
+import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 
 @Component({
   selector: 'app-header',
@@ -30,4 +31,6 @@ export class HeaderComponent implements OnInit{
     this.userService.logout();
     this.router.navigate(['/']);
   }
+
+
 }

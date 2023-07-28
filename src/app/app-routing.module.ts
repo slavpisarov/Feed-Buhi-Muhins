@@ -5,6 +5,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { CreateComponent } from './create/create.component';
 import { AuthActivate } from './auth.activate';
 import { EditFoodComponent } from './edit-food/edit-food.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path:'user',
     loadChildren: ()=> import('./user/user.module').then((m) => m.UserModule)
+  },
+  {
+    path:'**',
+    component: PageNotFoundComponent,
   },
 ];
 
