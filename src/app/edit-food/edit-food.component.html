@@ -1,0 +1,36 @@
+<div class="container">
+    <form class="login" #form="ngForm" (submit)="editFood(form)">
+
+        <fieldset>
+            <h1>Edit Page</h1>
+            <h2> Do you want to change this meal?</h2>
+
+            <p class="field field-icon">
+                <input class="input-error" type="text" name="type" id="type" value={{food}}
+                ngModel #inputFood="ngModel" required minlength="4">
+            </p>
+
+            <ng-container *ngIf="inputFood.touched">
+                <p class="error" *ngIf="inputFood.errors?.['required']">Input is required!</p>
+                <p class="error" *ngIf="inputFood.errors?.['minlength']">
+                    Meal must be at least 4 characters long.
+                </p>
+            </ng-container>
+
+            <!-- <div>
+                <button [disabled]="form.invalid">Edit</button>
+                <button >Cancel</button>
+            </div> -->
+            <div class="columns">
+                <div class="buttons">
+                    <button >Edit</button>
+                </div>
+                <div class="buttons">
+                    <button (click)="cancel()">Cancel</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+</div>

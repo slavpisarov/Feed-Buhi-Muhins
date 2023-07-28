@@ -11,9 +11,9 @@
                     <a class="normal">
                         <h2>{{food.type}}</h2>
                     </a>
-                    <div class="columns">
+                    <div class="columns" *ngIf="isLoggedIn">
                         <div class="subscribers">
-                            <button [routerLink]="" class="editBtn">Edit</button>
+                            <button [routerLink]="food.id" class="editBtn">Edit</button>
                         </div>
                         <div class="subscribers">
                             <button class="deleteBtn" (click)="delete(food.id)">Delete</button>

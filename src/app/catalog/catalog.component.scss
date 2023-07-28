@@ -42,7 +42,8 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.3em 0.5em;
+    padding: 0 0.5em;
+    padding-bottom: 0.5em;
     border-radius: 0.3em;
     font-size: 0.8em;
     margin-top: 1em;
@@ -73,6 +74,7 @@ h2{
 
 .subscribers button {
     padding: 0.2rem 0.5rem;
+    // margin-bottom: ;
     border: none;
     border-radius: 0.3rem;
     color: white;

@@ -25,4 +25,12 @@ export class ApiService {
     return this.http.delete<FoodWithId>(`https://buhi-muhins-food-generator-default-rtdb.europe-west1.firebasedatabase.app/food/${id}.json`)
   }
 
+  getOne(id:string){
+    return this.http.get<Food>(`https://buhi-muhins-food-generator-default-rtdb.europe-west1.firebasedatabase.app/food/${id}.json`)
+  }
+
+  updateOne(id:string,type:string){
+    return this.http.put<Food>(`https://buhi-muhins-food-generator-default-rtdb.europe-west1.firebasedatabase.app/food/${id}.json`,{type})
+  }
+
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { FoodWithId } from 'src/types/foodWithId';
 import { Router } from '@angular/router';
+import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-catalog',
@@ -12,19 +13,28 @@ export class CatalogComponent implements OnInit{
 
   foodList: FoodWithId[] = [];
 
-  constructor(private apiService: ApiService, private router:Router) {}
+  constructor(private apiService: ApiService,
+     private router:Router,
+     private userService:UserService) {}
 
   ngOnInit(): void {
+
     this.apiService.getFood().subscribe((foods) => {
 
       for (const key of Object.entries(foods)) {
 
         const foodObj = {id:key[0], type:key[1].type}
-
         this.foodList.push(foodObj)
-      }      
-      
+      }       
     });
+
+    if (localStorage.getItem('[user]')) {
+      this.userService.loggedIn = true;
+    }
+  }
+
+  get isLoggedIn(): boolean {
+    return this.userService.loggedIn;
   }
 
   delete(id:string){
