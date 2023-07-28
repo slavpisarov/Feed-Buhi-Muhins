@@ -14,7 +14,9 @@ export class LoginComponent{
 
   login(form:NgForm):void{
 
+    
     if(form.invalid) return;
+    
     
     const { email, password} = form.value;
     const currentUser = {email, password}

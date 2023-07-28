@@ -7,25 +7,24 @@
             <p class="field field-icon">
                 <label for="email"><span><i class="fas fa-envelope"></i></span></label>
                 <input class="input-error" type="email" name="email" id="email" placeholder="slav.pisarov@gmail.com"
-                ngModel required>
+                ngModel required #inputEmail="ngModel">
 
             </p>
 
-            <ng-container *ngIf="false">
-                <p class="error" >Email is required!</p>
-                <p class="error" >Email is not valid!</p>
+            <ng-container *ngIf="inputEmail.touched">
+                <p class="error" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+                <!-- <p class="error" *ngIf="inputEmail.errors?.['appEmailValidator']">Email is not valid!</p> -->
             </ng-container>
 
             <p class="field field-icon">
                 <label for="password"><span><i class="fas fa-lock"></i></span></label>
                 <input type="password" name="password" id="password" placeholder="******" 
-                ngModel required>
+                ngModel required #inputPasswprd="ngModel" minlength="3">
             </p>
 
-
-            <ng-container *ngIf="false">
-            <p class="error">Password is required!</p>
-            <p class="error">Password must be at least 5 characters!</p>
+            <ng-container *ngIf="inputPasswprd.touched">
+                <p class="error" *ngIf="inputPasswprd.errors?.['required']">Password is required!</p>
+                <!-- <p class="error" *ngIf="inputPasswprd.errors?.['minlength']">Password must be at least 4 characters!</p> -->
             </ng-container>
 
             <button>Login</button>

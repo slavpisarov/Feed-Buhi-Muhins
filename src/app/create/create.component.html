@@ -11,8 +11,7 @@
             </p>
 
             <ng-container *ngIf="inputFood.touched">
-                <p class="error" *ngIf="inputFood.touched">Flavour already exists</p>
-
+                <p class="error" *ngIf="inputFood.errors?.['required']">Flavour is required!</p>
                 <p class="error" *ngIf="inputFood.errors?.['minlength']">
                     Meal must be at least 4 characters long.
                 </p>

@@ -21,19 +21,9 @@ constructor(private apiService:ApiService, private router:Router){}
 
     const {type} = form.value;
 
-    this.apiService.getFood().subscribe((foods)=>{
-
-      Object.values(foods).forEach(el => {
-        if(el.type.toLowerCase() === type.toLowerCase()){
-          this.isExisting =true
-        }
-      });
-
-    })
-
-    this.apiService.addFood(type).subscribe(()=>{
-      this.router.navigate(['/home'])
-    })
+      this.apiService.addFood(type).subscribe(()=>{
+        this.router.navigate(['/home'])
+      })
 
   }
 

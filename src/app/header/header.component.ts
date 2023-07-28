@@ -16,10 +16,10 @@ export class HeaderComponent implements OnInit{
   // }
 
   ngOnInit(): void {
-    console.log(this.userService.isLogged);
-      if (localStorage.getItem('accessToken')) {
-        this.userService.loggedIn = true;
-      }
+    if (localStorage.getItem('[user]')) {
+      this.userService.loggedIn = true;
+    }
+    console.log(this.userService.loggedIn);
       
   }
     get isLoggedIn(): boolean {
