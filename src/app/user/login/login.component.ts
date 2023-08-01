@@ -14,21 +14,20 @@ export class LoginComponent{
 
   login(form:NgForm):void{
 
-    
     if(form.invalid) return;
-    
-    
+
     const { email, password} = form.value;
-    const currentUser = {email, password}
     
     this.userService.login().subscribe((res)=>{
       
       const users = Object.values(res);
-
+      
       const user = users.find((a:any) => a.email === email && a.password === password);
         
       if(user){
-        localStorage.setItem('[user]', JSON.stringify(currentUser));
+        console.log(user);
+        
+        localStorage.setItem('[user]', JSON.stringify({email}));
         this.userService.loggedIn = true;
         this.router.navigate(['/'])
       } else{

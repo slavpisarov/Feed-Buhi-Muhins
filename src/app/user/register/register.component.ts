@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent {
 
-
   constructor(private userService:UserService, private router:Router){}
 
   register(form:NgForm):void{
@@ -19,10 +18,9 @@ export class RegisterComponent {
 
     const { email, password, rePassword} = form.value;
 
-    const currentUser = {email, password}
-
     this.userService.register(email,password).subscribe(() =>{
-      localStorage.setItem('[user]', JSON.stringify(currentUser));
+      
+      localStorage.setItem('[user]', JSON.stringify({email}));
       this.userService.loggedIn = true
       this.router.navigate(['/'])
     },err=>{alert("Something went wrong")})
