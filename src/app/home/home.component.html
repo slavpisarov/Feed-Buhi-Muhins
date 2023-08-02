@@ -1,22 +1,32 @@
 <img src="../../assets/images/Buhi-Muhins-Photo.png" alt="cat-food">
 
 <div class="wrapper">
-    <!-- <span class="span-wrapper">What's that noise?</span>
-    <span class="span-wrapper">&#127831; &#128031; &#127829; &#127831; &#128031; &#127829;</span> -->
-    <!-- <span class="span-wrapper">Buhi Muhins is hungry again and must be fed immediately!</span> -->
-    <span class="span-wrapper">Buhi Muhins is hungry again </span>
-    <span class="span-wrapper">and must be fed immediately!</span>
-    <p id="food" *ngIf="currentFood.length !==0 "> {{ currentFood }}</p>
+    <span class="span-wrapper">What's that noise?</span>
+    <span class="span-wrapper" >
+        <div id="emojis">
+            <app-emoji-display [emojiUnicode]="'1F357'"></app-emoji-display>
+            <app-emoji-display [emojiUnicode]="'1F41F'"></app-emoji-display>
+            <app-emoji-display [emojiUnicode]="'1F355'"></app-emoji-display>
+            <app-emoji-display [emojiUnicode]="'1F357'"></app-emoji-display>
+            <app-emoji-display [emojiUnicode]="'1F41F'"></app-emoji-display>
+            <app-emoji-display [emojiUnicode]="'1F355'"></app-emoji-display>
+        </div>
+        </span>
+    <span class="span-wrapper">Buhi Muhins is hungry again and must be fed immediately!</span>
+    <!-- <span class="span-wrapper">Buhi Muhins is hungry again </span>
+    <span class="span-wrapper">and must be fed immediately!</span> -->
+        <p id="food" *ngIf="currentFood.length !==0 && !isLoading"> {{ currentFood }}</p>
+        <p class="loader" *ngIf="isLoading"></p>
     <button id="btn" [disabled]="isTheSame" (click)="generateFood()">And his next meal is...</button>
 </div>
 
-<div class="alert" *ngIf="isTheSame && sameFoodCounter < 2">
+<div class="alert" *ngIf="isTheSame && sameFoodCounter < 2 && !isLoading">
     <span class="alert-wrapper">I had that last time,</span>
     <span class="alert-wrapper">choose another!</span>
     <button id="alert-btn" (click)="regenerateFood()">Sure thing!</button>
 </div>
 
-<div class="alert" *ngIf="sameFoodCounter >= 2 && isTheSame">
+<div class="alert" *ngIf="sameFoodCounter >= 2 && isTheSame && !isLoading">
     <span class="alert-wrapper">Ahh, not again,</span>
     <span class="alert-wrapper">pleace try one more time!</span>
     <button id="alert-btn" (click)="regenerateFood()">No worries!</button>

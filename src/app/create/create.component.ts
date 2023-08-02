@@ -27,7 +27,7 @@ constructor(private apiService:ApiService, private router:Router, private userSe
     const {type} = form.value;
 
       this.apiService.addFood(type).subscribe(()=>{
-        this.router.navigate(['/home'])
+        this.router.navigate(['/catalog'])
       })
 
   }

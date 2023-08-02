@@ -20,14 +20,16 @@ img {
     border-radius: 5px;
 }
 
-
+#food{
+    font-size: 40px;
+    color: rgb(247, 137, 74);
+}
 .span-wrapper{
     display: block;
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 545;
     color: rgb(125, 211, 248);
-    // color: rgb(108, 207, 247);
 }
 
 p{
@@ -95,3 +97,36 @@ button{
     border-radius: 2px;
     cursor: pointer;
 }
+
+//LOADER
+.loader {
+    border: 6px solid rgba(0, 0, 0, 0.3);
+    border-top: 4px solid #ffffff; 
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    animation: spin 0.7s linear infinite; 
+    margin: 18px auto;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  //EMOJIS
+// :host {
+//     display: inline-block; /* Ensure the emoji component takes only the necessary width */
+//   }
+  
+  /* Emoji container styles */
+  #emojis {
+    display: inline-flex;
+    font-size: 37px;
+  }
+  

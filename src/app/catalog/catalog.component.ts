@@ -40,7 +40,7 @@ export class CatalogComponent implements OnInit{
   delete(id:string){
 
     this.apiService.delete(id).subscribe(()=>{
-        this.router.navigate(['/'])
+        this.router.navigate(['/catalog'])
     })
     
   }

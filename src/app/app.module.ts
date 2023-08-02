@@ -10,6 +10,7 @@ import { CreateComponent } from './create/create.component';
 import { FormsModule } from '@angular/forms';
 import { EditFoodComponent } from './edit-food/edit-food.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EmojiDisplayComponent } from './emoji-display/emoji-display.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     CatalogComponent,
     CreateComponent,
     EditFoodComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    EmojiDisplayComponent
   ],
   imports: [
     BrowserModule,
