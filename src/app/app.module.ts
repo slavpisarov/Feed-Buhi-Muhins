@@ -21,7 +21,7 @@ import { EmojiDisplayComponent } from './emoji-display/emoji-display.component';
     CreateComponent,
     EditFoodComponent,
     PageNotFoundComponent,
-    EmojiDisplayComponent
+    EmojiDisplayComponent,
   ],
   imports: [
     BrowserModule,
