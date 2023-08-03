@@ -39,10 +39,12 @@ export class CatalogComponent implements OnInit{
 
   delete(id:string){
 
-    this.apiService.delete(id).subscribe(()=>{
-        this.router.navigate(['/catalog'])
-    })
-    
+    const result = confirm('Are you sure you want to delete this item?')
+    if(result){
+      this.apiService.delete(id).subscribe(()=>{
+        this.router.navigate(['/'])
+      })
+    }
   }
 
 

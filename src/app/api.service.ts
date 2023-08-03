@@ -26,6 +26,7 @@ export class ApiService {
   }
 
   delete(id:string){
+
     return this.http.delete<FoodWithId>(`https://buhi-muhins-food-generator-default-rtdb.europe-west1.firebasedatabase.app/food/${id}.json`)
   }
 
