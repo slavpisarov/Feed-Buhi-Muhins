@@ -28,6 +28,9 @@ constructor(private apiService:ApiService, private router:Router, private userSe
 
       this.apiService.addFood(type).subscribe(()=>{
         this.router.navigate(['/catalog'])
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
       })
 
   }

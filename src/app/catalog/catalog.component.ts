@@ -26,6 +26,9 @@ export class CatalogComponent implements OnInit{
         const foodObj = {id:key[0], type:key[1].type}
         this.foodList.push(foodObj)
       }       
+    },
+    (error) => {
+      console.error('Error fetching data:', error);
     });
 
     if (localStorage.getItem('[user]')) {
@@ -43,6 +46,9 @@ export class CatalogComponent implements OnInit{
     if(result){
       this.apiService.delete(id).subscribe(()=>{
         this.router.navigate(['/'])
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
       })
     }
   }
