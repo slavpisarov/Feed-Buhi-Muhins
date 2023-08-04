@@ -25,12 +25,12 @@ const routes: Routes = [
   {
     path:'create',
     component: CreateComponent,
-    // canActivate:[AuthActivate]
+    canActivate:[AuthActivate]
   },
   {
     path:'catalog/:foodId',
     component: EditFoodComponent,
-    // canActivate:[AuthActivate]
+    canActivate:[AuthActivate]
   },
   {
     path:'user',
