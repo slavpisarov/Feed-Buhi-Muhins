@@ -6,6 +6,7 @@ import { Food } from "src/types/food";
   selector: "app-home",
   templateUrl: "./home.component.html",
   styleUrls: ["./home.component.scss"],
+  
 })
 export class HomeComponent {
   isLoading: boolean = false;
