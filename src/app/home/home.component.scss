@@ -1,15 +1,16 @@
 
 img {
     display: block;
-    height: 84vh; 
-    width: 40vw;
+    height: 90vh; 
+    width: 48vw;
+    min-width: 500px;
     margin: 0 auto;
 }
 
 .wrapper{
     width: 60vmin;
     padding: 10px 10px;
-    background-color:rgba(3, 23, 39, 0.965);  
+    background-color:rgba(3, 23, 39, 0.876);  
     position:absolute;
     transform: translate(-50%, -50%);
     top: 68%;
@@ -58,21 +59,24 @@ button{
     padding: 12px 20px;
     margin: 5px auto;
     border-radius: 5px;
-    cursor: pointer;
+  }
+  
+  button:hover,
+  #alert-btn:hover{
+  cursor: pointer;
+
 }
 
 .alert{
-    width: 50vmin;
-    padding: 70px 0px;
+    width: 25vw;
+    min-width: 200px;
+    padding: 8vh 0px;
     background-color:rgba(224, 22, 22, 0.812);    
     position:fixed;
     transform: translate(-50%, -50%);
-    top: 10%;
-    left: 50%;
+    top: 20vh;
+    left: 70vw;
     border-radius: 20px;
-    margin-left: 250px;
-    margin-top: 50px;
-    // display: none;
 }
 
 .alert-wrapper{
@@ -94,7 +98,6 @@ button{
     padding: 6px 12px;
     margin: 30px auto 0 auto;
     border-radius: 2px;
-    cursor: pointer;
 }
 
 //LOADER
@@ -118,10 +121,6 @@ button{
   }
   
 
-  //EMOJIS
-// :host {
-//     display: inline-block; /* Ensure the emoji component takes only the necessary width */
-//   }
   
   /* Emoji container styles */
   #emojis {

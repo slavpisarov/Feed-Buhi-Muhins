@@ -13,8 +13,6 @@
         </div>
         </span>
     <span class="span-wrapper">Buhi Muhins is hungry again and must be fed immediately!</span>
-    <!-- <span class="span-wrapper">Buhi Muhins is hungry again </span>
-    <span class="span-wrapper">and must be fed immediately!</span> -->
         <p id="food" *ngIf="currentFood.length !==0 && !isLoading"> {{ currentFood }}</p>
         <p class="loader" *ngIf="isLoading"></p>
     <button id="btn" [disabled]="isTheSame" (click)="generateFood()">And his next meal is...</button>
