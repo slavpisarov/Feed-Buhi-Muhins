@@ -5,7 +5,7 @@ header {
     background: linear-gradient(0deg, rgba(7, 43, 73, 0.945) 0%, rgba(11, 39, 62, 0.965) 45%, rgba(24, 60, 91, 0.965) 65%, rgb(27, 99, 127) 80%, rgb(108, 207, 247) 100%);
 }
 
-header ul {
+.mini-navbar ul {
     padding: 0;
     display: flex;
     align-items: center;
@@ -35,10 +35,8 @@ header a {
     color: rgb(255, 255, 255);
     cursor: pointer;
     font-size: 22px;
-
-
     border:none;
-     padding: 2px;
+    padding: 2px;
 
 }
 
@@ -57,17 +55,11 @@ nav {
 .logo-wrap {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: .3em;
-    // margin: 0.1em 0;
     cursor: pointer;
 margin: 0px;
 
 }
 
-// .logo-wrap :hover{
-// background-color: #00acf4;
-//   border-radius: 10px;
-// // margin: 5px;
-// }
 
 .mini-navbar-wrap {
     display: flex;
@@ -105,4 +97,34 @@ background-color: #00acf4;
     background-color: #00acf4;
    border-radius: 5px;
 }
+
+
+@media only screen and (max-width: 700px) {
+
+    .logo{
+        font-size: 20px;
+        padding: 0.5em 0;
+        max-width: 20ch;
+    }
+
+    header a{
+        font-size:3.5vw
+    }
+
+    .mini-navbar-wrap{
+        width: 90%;
+    }
+
+    .links{
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+    .links[_ngcontent-ng-c4134154650] li[_ngcontent-ng-c4134154650]{
+        padding: 0.4em 0;
+    }
+  }
 

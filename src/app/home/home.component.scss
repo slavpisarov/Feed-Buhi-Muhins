@@ -128,3 +128,54 @@ button{
     font-size: 37px;
   }
   
+
+  @media only screen and (max-width: 700px) {
+
+    .wrapper {
+      width: 80vw;
+      max-width: 400px; 
+      padding: 10px;
+      background-color: rgba(3, 23, 39, 0.876);
+      position: absolute;
+      top: 77%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+    }
+    
+
+    img {
+      height: 90vh; 
+      min-width: 0px;
+      width: 100vw;
+      display: block;
+  }
+
+  .span-wrapper{
+    font-size: 5vw;
+    width: 27ch ;
+  }
+
+  #food{
+    font-size: 6vw;
+  }
+  .loader {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-top: 2px solid #ffffff; 
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.7s linear infinite; 
+    margin: 18px auto;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  }
